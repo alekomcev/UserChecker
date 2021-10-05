@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+// java ee спецификации не хранятся в jdk, так как девелопятся разными командами и должны подключаться
+// отдельно
+dependencies {
+    implementation group: 'org.springframework', name: 'spring-context', version: '5.3.9'
+
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.13.0-rc2'
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.13.0-rc2'
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.13.0-rc2'
+
+    implementation group: 'javax.validation', name: 'validation-api', version: '2.0.1.Final'
+
+    implementation group: 'org.hibernate.validator', name: 'hibernate-validator', version: '7.0.1.Final'
+}
